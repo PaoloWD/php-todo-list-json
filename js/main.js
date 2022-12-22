@@ -25,7 +25,7 @@ const app = createApp({
       });
     },
     taskCompleted(i) {
-      this.isSelected = !this.isSelected;
+      this.todoList[i].status = !this.todoList[i].status;
       console.log(i);
     },
   },

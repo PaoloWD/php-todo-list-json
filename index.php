@@ -26,7 +26,7 @@
                             {{todo.WID}}
                             </div>
                             <div>
-                                <button class="btn btn-danger">X</button>
+                                <button @click="deleteTask(i)" class="btn btn-danger">X</button>
                             </div>
                         </div>
                     </div>

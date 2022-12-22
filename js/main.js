@@ -26,7 +26,11 @@ const app = createApp({
     },
     taskCompleted(i) {
       this.todoList[i].status = !this.todoList[i].status;
-      console.log(i);
+      console.log("ababa", i);
+    },
+    deleteTask(i) {
+      this.todoList.splice(i, 1);
+      console.log("dididid", i);
     },
   },
 }).mount("#app");

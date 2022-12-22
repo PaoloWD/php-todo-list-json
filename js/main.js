@@ -5,6 +5,7 @@ const app = createApp({
     return {
       todoList: [],
       todo: {},
+      index: Number,
     };
   },
   methods: {
@@ -29,13 +30,15 @@ const app = createApp({
       console.log("TaskComplete", i);
     },
     deleteTask(i) {
+      this.index = i;
       axios
-        .post("API/deleteTodo.php", i, {
+        .post("API/deleteTodo.php", this.index, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((resp) => {
           this.fetchTodo();
         });
+      console.log("this.index", this.index);
     },
   },
 }).mount("#app");

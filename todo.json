@@ -1,62 +1,10 @@
 [
     {
+        "WID": "dsfds",
+        "status": false
+    },
+    {
         "WID": "ciao",
-        "status": false
-    },
-    {
-        "WID": "mi",
-        "status": false
-    },
-    {
-        "WID": "michiamo",
-        "status": false
-    },
-    {
-        "WID": "michiamos",
-        "status": false
-    },
-    {
-        "WID": "df",
-        "status": false
-    },
-    {
-        "WID": "sd",
-        "status": false
-    },
-    {
-        "WID": "sdf",
-        "status": false
-    },
-    {
-        "WID": "dsf",
-        "status": false
-    },
-    {
-        "WID": "sf",
-        "status": false
-    },
-    {
-        "WID": "dsf",
-        "status": false
-    },
-    {
-        "WID": "sdf",
-        "status": false
-    },
-    {
-        "WID": "sdffsd",
-        "status": false
-    },
-    {
-        "WID": "sdf",
-        "status": false
-    },
-    {
-        "WID": "sdf",
-        "status": false
-    },
-    {
-        "WID": "sdf",
         "status": false
     }
 ]

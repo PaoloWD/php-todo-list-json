@@ -5,7 +5,6 @@ const app = createApp({
     return {
       todoList: [],
       todo: {},
-      isSelected: false,
     };
   },
   methods: {
@@ -17,6 +16,7 @@ const app = createApp({
         .then((resp) => {
           this.fetchTodo();
         });
+      this.todo.WID = "";
     },
     fetchTodo() {
       axios.get("API/todo.php").then((resp) => {
@@ -26,11 +26,19 @@ const app = createApp({
     },
     taskCompleted(i) {
       this.todoList[i].status = !this.todoList[i].status;
-      console.log("ababa", i);
+      console.log("TaskComplete", i);
     },
     deleteTask(i) {
-      this.todoList.splice(i, 1);
-      console.log("dididid", i);
+      axios
+        .post("API/deleteTodo.php", i, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((resp) => {
+          this.todoList.splice(i, 1);
+          resp.data.splice(i, 1);
+          console.log("response", resp.data);
+          console.log("index", i);
+        });
     },
   },
 }).mount("#app");

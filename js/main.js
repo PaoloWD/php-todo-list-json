@@ -34,10 +34,7 @@ const app = createApp({
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((resp) => {
-          this.todoList.splice(i, 1);
-          resp.data.splice(i, 1);
-          console.log("response", resp.data);
-          console.log("index", i);
+          this.fetchTodo();
         });
     },
   },

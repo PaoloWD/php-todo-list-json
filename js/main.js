@@ -24,8 +24,9 @@ const app = createApp({
         console.log(resp.data);
       });
     },
-    taskCompleted() {
+    taskCompleted(i) {
       this.isSelected = !this.isSelected;
+      console.log(i);
     },
   },
 }).mount("#app");

@@ -5,6 +5,7 @@ const app = createApp({
     return {
       todoList: [],
       todo: {},
+      isSelected: false,
     };
   },
   methods: {
@@ -22,6 +23,9 @@ const app = createApp({
         this.todoList = resp.data;
         console.log(resp.data);
       });
+    },
+    taskCompleted() {
+      this.isSelected = !this.isSelected;
     },
   },
 }).mount("#app");

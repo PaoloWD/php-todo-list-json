@@ -21,7 +21,14 @@
                 <div class="col-4">
                     <h1 class="text-center text-white">Todo List</h1>
                     <div class="bg-white">
-                        <div class="border-bottom p-3" v-for="todo in todoList">{{todo.WID}}</div>
+                        <div class="border-bottom d-flex justify-content-between p-3" v-for="todo, i in todoList">
+                            <div @click="taskCompleted" :class="{divSelected: isSelected}">
+                            {{todo.WID}}
+                            </div>
+                            <div>
+                                <button class="btn btn-danger">X</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
@@ -36,5 +43,8 @@
         </div>
     </div>
     <script src="js/main.js"></script>
-</body>
-</html>
+    </body>
+    </html>
+     
+      
+    

@@ -1,5 +1,7 @@
-
-
+<?php
+$ciao = $_POST["i"];
+var_dump($ciao);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +23,8 @@
                 <div class="col-4">
                     <h1 class="text-center text-white">Todo List</h1>
                     <div class="bg-white">
-                        <div class="border-bottom d-flex justify-content-between p-3" v-for="todo, i in todoList">
-                            <div @click="taskCompleted(i)" :class="{divSelected: todo.status}">
+                        <div class="border-bottom d-flex justify-content-between p-3" v-for="(todo, i) in todoList">
+                            <div @click="taskCompleted(i)" :class="{divSelected: todo.status}" >
                             {{todo.WID}}
                             </div>
                             <div>

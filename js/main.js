@@ -32,9 +32,13 @@ const app = createApp({
     deleteTask(i) {
       this.index = i;
       axios
-        .post("API/deleteTodo.php", this.index, {
-          headers: { "Content-Type": "multipart/form-data" },
-        })
+        .post(
+          "API/deleteTodo.php",
+          { index: this.index },
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+          }
+        )
         .then((resp) => {
           this.fetchTodo();
         });
